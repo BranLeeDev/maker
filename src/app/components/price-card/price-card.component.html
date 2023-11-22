@@ -1,0 +1,23 @@
+<article>
+  <img [src]="subscriptionPlan.image.url" [alt]="subscriptionPlan.image.alt" />
+  <div>
+    <h3>{{ subscriptionPlan.title }}</h3>
+    <p>{{ subscriptionPlan.description }}</p>
+  </div>
+  <div>
+    <p>
+      {{
+        subscriptionPlan.price <= 1
+          ? 'Free'
+          : (subscriptionPlan.price | currency)
+      }}
+    </p>
+    <ul>
+      <li *ngFor="let feature of subscriptionPlan.features">
+        <p>
+          {{ feature }}
+        </p>
+      </li>
+    </ul>
+  </div>
+</article>

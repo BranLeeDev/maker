@@ -1,0 +1,38 @@
+<header>
+  <h1>Maker</h1>
+  <img src="../assets/images/svg/logo.svg" alt="Web page logo" />
+</header>
+<main>
+  <section>
+    <div>
+      <div>
+        <h2>Get paid for the work you love to do.</h2>
+        <p>
+          The 9-5 grind is so last century. We believe in living life on your
+          own terms. Whether you’re looking to escape the rat race or set up a
+          side hustle, we’ve got you covered.
+        </p>
+      </div>
+      <span></span>
+    </div>
+    <ul>
+      <li *ngFor="let feature of featuresList">
+        <app-feature-card [feature]="feature" />
+      </li>
+    </ul>
+  </section>
+  <section>
+    <div>
+      <h2>Our pricing plans</h2>
+      <p>
+        We only make money when our creators make money. Our plans are always
+        affordable, and it’s completely free to get started.
+      </p>
+    </div>
+    <ul>
+      <li *ngFor="let subscription of subscriptionsList">
+        <app-price-card [subscriptionPlan]="subscription" />
+      </li>
+    </ul>
+  </section>
+</main>
